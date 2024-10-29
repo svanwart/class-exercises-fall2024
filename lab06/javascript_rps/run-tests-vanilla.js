@@ -21,9 +21,20 @@ function testPaperBeatsRockCommutes() {
         "paper beats rock (flipped)"
     );
 }
+function testRockBeatsScissors() {
+    return assertPrint(
+        rps("scissors", "rock") === "Rock wins!",
+        "rock beats scissors"
+    );
+}
 
 // add more test functions here to exhaustively test your rps function...
 
 // Once you have defined each test function, don't forget to
 // add the function definition to the test harness:
-runAllTests([testHelloWorld, testPaperBeatsRock, testPaperBeatsRockCommutes]);
+runAllTests([
+    testHelloWorld,
+    testPaperBeatsRock,
+    testPaperBeatsRockCommutes,
+    testRockBeatsScissors,
+]);
